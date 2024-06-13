@@ -1,0 +1,172 @@
+/* Import the Figtree font from Google Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  /* Colors variables */
+  --color-black: #111111;
+  --color-pure-white: #ffffff;
+  --color-yellow: #f4d04e;
+  --color-grey: #7f7f7f;
+  /* Font sizes variables */
+  --font-size-24px: 1.5rem;
+  --font-size-16px: 1rem;
+  --font-size-14px: 0.875rem;
+  /* Font weight variables */
+  --font-weight-extrabold: 800;
+  --font-weight-medium: 500;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Font Figtree */
+.heading,
+.category,
+.publication-date,
+.profile,
+.description {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 150%;
+}
+
+/* Fonts weights */
+.heading,
+.category,
+.profile {
+  font-weight: var(--font-weight-extrabold);
+}
+.description,
+.publication-date {
+  font-weight: var(--font-weight-medium);
+}
+
+/* Font sizes */
+.category,
+.publication-date,
+.profile {
+  font-size: var(--font-size-14px);
+}
+.heading {
+  font-size: var(--font-size-24px);
+}
+.description {
+  font-size: var(--font-size-16px);
+}
+
+/* Font colors*/
+.heading,
+.category,
+.profile,
+.publication-date {
+  color: var(--color-black);
+}
+.description {
+  color: var(--color-grey);
+}
+
+/* Flex containers */
+main,
+.card,
+.profile {
+  display: flex;
+}
+main {
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  width: 100vw;
+}
+.card {
+  flex-direction: column;
+  background-color: var(--color-pure-white);
+  max-width: 384px;
+  max-height: fit-content;
+  border-radius: 20px;
+  border: 1px solid var(--color-black);
+  padding: 24px;
+  box-shadow: 8px 8px 0px 0px #000000;
+}
+
+.profile {
+  align-items: center;
+  width: fit-content;
+}
+
+/* Background color yellow */
+.category,
+main,
+footer {
+  background-color: var(--color-yellow);
+}
+
+/* Images */
+.image {
+  border-radius: 10px;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+.profile img {
+  height: 32px;
+  padding-right: 12px;
+}
+
+/* Category */
+.category {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  padding: 4px 12px 4px 12px;
+  border-radius: 4px;
+}
+
+/* Publication date */
+.publication-date {
+  margin: 12px 0 12px 0;
+}
+
+/* Description */
+.description {
+  margin: 12px 0 24px 0;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 5vh;
+}
+
+/* Attribution */
+.attribution {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Hover animation */
+
+.heading:hover {
+  color: var(--color-yellow);
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 16px 16px 0px 0px #000000;
+}
+
+/* Queries */
+@media (max-width: 384px) {
+  .card {
+    width: 90vw;
+  }
+}
